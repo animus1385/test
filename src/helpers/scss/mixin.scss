@@ -1,0 +1,26 @@
+@mixin grid($col: 1, $row: 1, $positionY: 'false', $positionX: 'false') {
+    display: grid;
+    grid-template-columns: repeat($col, 1fr);
+    grid-template-columns: repeat($row, 1fr);
+
+    @if $positionY =='true' {
+        align-items: center;
+    }
+
+    @if $positionX =='true' {
+        justify-content: center;
+    }
+}
+
+@mixin flex($direction: column, $positionY, $positionX) {
+    display: flex;
+    flex-direction: $direction;
+
+    @if $positionY !='' {
+        align-items: $positionY;
+    }
+
+    @if $positionX !='' {
+        justify-content: $positionX;
+    }
+}
