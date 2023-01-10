@@ -1,4 +1,12 @@
 @import "../../helpers/scss/variables.scss";
 @import "../../helpers/scss/mixin.scss";
 
-.header{}
+.header {
+    position: fixed;
+
+    &__container {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        @include flex(row, center, space-between)
+    }
+}

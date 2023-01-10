@@ -12,7 +12,7 @@
     }
 }
 
-@mixin flex($direction: column, $positionY, $positionX) {
+@mixin flex($direction: column, $positionY: inherit, $positionX: inherit) {
     display: flex;
     flex-direction: $direction;
 
